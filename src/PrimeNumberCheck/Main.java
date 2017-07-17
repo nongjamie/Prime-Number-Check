@@ -8,6 +8,10 @@ package PrimeNumberCheck;
  */
 public class Main {
 
+	/**
+	 * Run the program.
+	 * @param args
+	 */
 	public static void main(String[]args) {
 		Console console = new Console();
 		GUI gui = new GUI( console );

@@ -10,6 +10,9 @@ public class Console {
 
 	private String result = "";
 
+	/**
+	 * This is the constructor.
+	 */
 	public Console() {
 		/* Do nothing */
 	}

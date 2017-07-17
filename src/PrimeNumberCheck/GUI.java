@@ -35,6 +35,10 @@ public class GUI {
 	private JButton resetButton;
 	private JButton quitButton;
 	
+	/**
+	 * This is the Graphic User Interface constructor.
+	 * @param console , Prime Number Checking logic.
+	 */
 	public GUI( Console console ) {
 		this.console = console;
 		frame = new JFrame( "Prime Number Checking by Jamie SK" );
@@ -43,6 +47,9 @@ public class GUI {
 		addAllComponent();
 	}
 	
+	/**
+	 * Manage all components.
+	 */
 	public void initComponent() {
 		
 		// Top Panel
@@ -90,24 +97,34 @@ public class GUI {
 			
 		} );
 		
-		
-		
 	}
 	
+	/**
+	 * Add all components into appropriate panels.
+	 * Add all components into the frame.
+	 */
 	public void addAllComponent() {
+		
+		// Add components into Top panel.
 		topPanel.add( labelInputNumber );
 		topPanel.add( inputNumberField );
 		topPanel.add( labelResult );
 		topPanel.add( resultField );
 		
+		// Add components into Buttom panel.
 		buttomPanel.add( checkButton );
 		buttomPanel.add( resetButton );
 		buttomPanel.add( quitButton );
 		
+		// Add all panels into the frame.
 		frame.add( topPanel , BorderLayout.NORTH );
 		frame.add( buttomPanel , BorderLayout.SOUTH );
+		
 	}
 	
+	/**
+	 * Run the frame on the display.
+	 */
 	public void run() {
 		frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 		frame.setVisible( true );
@@ -115,6 +132,9 @@ public class GUI {
 		frame.setMinimumSize( new Dimension( 600 , 90 ) );
 	}
 	
+	/**
+	 * Action to check the prime number.
+	 */
 	class CheckButtonListener implements ActionListener , KeyListener {
 		
 		@Override
@@ -122,6 +142,9 @@ public class GUI {
 			/* Do nothing */
 		}
 		
+		/**
+		 * When Enter on keyboard is pressed.
+		 */
 		@Override
 		public void keyPressed(KeyEvent e) {
 			int key = e.getKeyCode();
@@ -137,6 +160,9 @@ public class GUI {
 			/* Do nothing */
 		}
 		
+		/**
+		 * When Check button in the program is pressed.
+		 */
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			String input = inputNumberField.getText();
